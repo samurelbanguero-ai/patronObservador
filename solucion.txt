@@ -1,0 +1,23 @@
+Para resolver este problema se implementa el Patrón de Diseño Observador (Observer Pattern). 
+Este patrón permite establecer una relación de tipo uno a muchos, donde un objeto central —llamado
+ Sujeto— notifica automáticamente a todos los objetos dependientes —denominados Observadores— cuando
+  ocurre un cambio en su estado.
+
+En este contexto, el bus actúa como el Sujeto, ya que mantiene información relevante como su posición
+ y ruta. Los diferentes sistemas que necesitan recibir actualizaciones —como las pantallas de las
+  estaciones, las aplicaciones móviles, el centro de control y el sistema de estadísticas— se 
+  comportan como Observadores. Cada observador se suscribe al bus y recibe una notificación 
+  automática cada vez que el bus cambia de posición.
+
+Gracias a este patrón, el bus no necesita conocer los detalles de los sistemas que lo observan, lo 
+que reduce significativamente el acoplamiento entre componentes. Además, los observadores pueden 
+suscribirse o desuscribirse dinámicamente, haciendo que el sistema sea más flexible y fácil de
+ mantener. Si se requiere integrar un nuevo tipo de observador (por ejemplo, un tablero digital 
+ adicional o una aplicación de terceros), se puede hacer sin modificar el código del bus, solo 
+ implementando la interfaz de observador.
+
+En resumen, el patrón Observador permite que el sistema de transporte sea modular, 
+escalable y eficiente, asegurando que todos los interesados reciban información en tiempo 
+real sin comprometer la estructura del sistema. De esta forma, se logra un flujo automático 
+de datos, menor dependencia entre los componentes y una arquitectura preparada para futuras 
+expansiones tecnológicas.

@@ -1,0 +1,17 @@
+En un sistema de transporte público de buses, cada vehículo se desplaza constantemente a 
+lo largo de una ruta específica. Diversos actores —como los pasajeros que esperan en los paraderos, 
+las pantallas informativas en las estaciones, las aplicaciones móviles de los usuarios, el centro de
+ control de tráfico y el sistema de estadísticas— 
+necesitan recibir información actualizada sobre la posición y el estado de cada bus en tiempo real.
+
+Sin embargo, si este sistema se implementara sin una arquitectura adecuada, cada bus tendría 
+que actualizar manualmente a cada uno de estos sistemas cada vez que su posición cambia. Esto 
+genera un alto acoplamiento entre los componentes, ya que el bus dependería directamente de las
+ pantallas, las apps y otros sistemas para funcionar correctamente. Además, si se quisiera agregar 
+ un nuevo observador, como una nueva aplicación o una pantalla adicional, sería necesario modificar
+  el código del bus, afectando su estabilidad y aumentando la complejidad del mantenimiento.
+
+Este enfoque rígido provoca varios problemas: dificulta la escalabilidad del sistema, hace más 
+costosa la integración de nuevas tecnologías y aumenta la probabilidad de errores por dependencias 
+innecesarias entre módulos. En otras palabras, el sistema se vuelve poco flexible, difícil de 
+extender y propenso a fallos cuando se realizan cambios.
